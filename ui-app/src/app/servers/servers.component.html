@@ -1,0 +1,16 @@
+<!-- <input type="text" (input)="updateServerName($event)" /> -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 my-5">
+      <div class="card card-body bg-light">
+        <input class="form-control" [(ngModel)]="serverName" />
+        <!-- <p>{{ serverName }}</p> -->
+        <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="createServer()">Add Server</button>
+        <!-- <p [innerText]="allowNewServer"></p> -->
+        <p>{{ serverCreateMessage }}</p>
+        <app-server></app-server>
+        <app-server></app-server>
+      </div>
+    </div>
+  </div>
+</div>
